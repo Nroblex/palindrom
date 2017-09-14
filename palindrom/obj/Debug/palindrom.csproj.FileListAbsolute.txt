@@ -1,0 +1,6 @@
+C:\Users\SEAS19062\Source\Repos\palindrom\palindrom\bin\Debug\palindrom.exe.config
+C:\Users\SEAS19062\Source\Repos\palindrom\palindrom\bin\Debug\palindrom.exe
+C:\Users\SEAS19062\Source\Repos\palindrom\palindrom\bin\Debug\palindrom.pdb
+C:\Users\SEAS19062\Source\Repos\palindrom\palindrom\obj\Debug\palindrom.csprojResolveAssemblyReference.cache
+C:\Users\SEAS19062\Source\Repos\palindrom\palindrom\obj\Debug\palindrom.exe
+C:\Users\SEAS19062\Source\Repos\palindrom\palindrom\obj\Debug\palindrom.pdb
