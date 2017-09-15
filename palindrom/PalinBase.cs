@@ -19,6 +19,23 @@ namespace palindrom
             return true;
         }
 
+        public void RunPalindrom(int MaxValue)
+        {
+            string val = String.Empty;
+            for (int n = 10; n <= MaxValue; n++)
+            {
+                var v = n.ToString().ToCharArray();
+                char[] cp = new char[v.Length];
+
+                Array.Copy(v, cp, v.Length);
+                Array.Reverse(v);
+
+                if (IsPalindrom(cp, v))
+                {
+                    Console.WriteLine("Palindrom found => {0} ", new string(cp));
+                }
+            }
+        }
         public void RunPalindromText(List<String> FileRows)
         {
             List<String> words = new List<string>();
