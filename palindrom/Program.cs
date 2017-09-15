@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace palindrom
 {
-    class Program
+    class Program : PalinBase
     {
-        static Palindrome palindrom;
         static void Main(string[] args)
         {
             int nMax = 0;
+
             if (args.Length == 0)
+            {
+                Console.WriteLine(" Give -f for textfile or -n for numbers");
+                return;
+            }
+
+            if (args[0].CompareTo("-f") == 0)
+            {
+
+            }
+            else if (args[0].CompareTo("-n") == 0)
             {
                 Console.Write("Enter maxvalue to test: ");
                 String Max = Console.ReadLine();
@@ -24,52 +34,34 @@ namespace palindrom
                     Console.WriteLine("Enter a proper integer value!");
                     return;
                 }
+
+                
+                
+            }
+            else
+            {
+                Console.WriteLine("Wrong argument.");
+                return;
             }
 
-            palindrom = new Palindrome(nMax);
-            palindrom.Run();
+            TextPalindrom textPalindrom = new TextPalindrom(@"c:\tmp\dberr.txt");
+
 
             Console.ReadKey();
-        }
-    }
 
-    class Palindrome
-    {
-        public int MaxValue { get; set; }
 
-        public Palindrome(int max)
-        {
-            MaxValue = max;
-        }
-
-        internal void Run()
-        {
-            string val = String.Empty;
-            for (int n = 10; n<=MaxValue; n++)
+            /*
+            if (args.Length == 0)
             {
-                var v = n.ToString().ToCharArray();
-                char[] cp = new char[v.Length];
-
-                Array.Copy(v, cp, v.Length);
-                Array.Reverse(v);
-
-                if (IsPalindrom(cp, v))
-                {
-                    Console.WriteLine("Palindrom found => {0} ", new string(cp));
-                }
-            }
-        }
-
-        internal bool IsPalindrom(char[] orig, char[] reverse)
-        {
-            //1991
-            for (int n = 0; n<=orig.Length-1; n++)
-            {
-                if (orig[n] != reverse[n])
-                    return false;
+                
             }
 
-            return true;
+            
+            Console.ReadKey(); */
         }
+
+
     }
+
+
 }
