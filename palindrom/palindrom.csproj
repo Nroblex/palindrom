@@ -44,9 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PalinBase.cs" />
+    <Compile Include="Palindrom.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TextPalindrom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

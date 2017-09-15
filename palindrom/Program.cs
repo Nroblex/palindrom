@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace palindrom
 {
-    class Program : PalinBase
+    class Program 
     {
         static void Main(string[] args)
         {
             int nMax = 0;
-
+            string PathTextfile = null;
             if (args.Length == 0)
             {
                 Console.WriteLine(" Give -f for textfile or -n for numbers");
@@ -20,6 +20,10 @@ namespace palindrom
 
             if (args[0].CompareTo("-f") == 0)
             {
+                Console.WriteLine("Input textfile: ");
+                PathTextfile = Console.ReadLine();
+
+                new Palindrom(PathTextfile);
 
             }
             else if (args[0].CompareTo("-n") == 0)
@@ -35,7 +39,7 @@ namespace palindrom
                     return;
                 }
 
-                
+                new Palindrom(nMax);
                 
             }
             else
@@ -44,22 +48,13 @@ namespace palindrom
                 return;
             }
 
-            TextPalindrom textPalindrom = new TextPalindrom(@"c:\tmp\dberr.txt");
-
+            
 
             Console.ReadKey();
 
-
-            /*
-            if (args.Length == 0)
-            {
-                
-            }
-
-            
-            Console.ReadKey(); */
         }
 
+        
 
     }
 
